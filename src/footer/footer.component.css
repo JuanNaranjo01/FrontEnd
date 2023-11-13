@@ -1,0 +1,22 @@
+.posicion-logout button {
+  width: 90px;
+  height: 50px;
+  background: rgba(242,234,225,1);;
+  position: absolute;
+  top: 560px;
+  left: 90px;
+  border-style: none;
+  overflow: hidden;
+  font-family: Montserrat;
+  font-weight: bold;
+  color: rgb(12, 11, 11);
+  opacity: 1;
+  font-size: 14px;
+}
+
+.posicion-logout svg{
+  width: 90px;
+  position: absolute;
+  top: 580px;
+  left: 150px;
+}
