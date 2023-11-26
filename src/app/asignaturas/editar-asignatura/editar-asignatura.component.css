@@ -1,48 +1,44 @@
-.rowed {
-  top: 100px;
-  width: 360px;
+.rowED {
+  width: 450px;
   height: 50px;
   font-family: Montserrat;
   font-size: 14px;
   opacity: 1;
   position: absolute;
+  top: 215px;
   left: 310px;
 
 }
 
 
-
-.btn-primary1{
+.btn-primaryED{
   width: 150px;
   height: 50px;
   font-family: Montserrat;
   font-size: 14px;
   opacity: 1;
   position: absolute;
-  top: 90px;
-  left: 420px;
+  top: 250px;
+  left: 260px;
   border-radius: 5px;
   background: #feaf00;
   border: 2px;
 }
 
 
-.btn-danger2{
+.btn-dangerED{
   width: 150px;
   height: 50px;
   font-family: Montserrat;
   font-size: 14px;
   opacity: 1;
   position: absolute;
-  top: 90px;
-  left: 210px;
+  top: 250px;
+  left: 20px;
   border-radius: 5px;
   border: 2px solid #c2c2c2;
 }
 
-.btn-dangerCA:hover{
-  background-color: #f0e8df;
-}
 .col {
   display: flex;
   flex-direction: column;
@@ -56,14 +52,5 @@ label {
 
 input {
   margin-bottom: 5px;
+  width:400px;
 }
-
-car{
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-}
-
