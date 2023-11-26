@@ -51,8 +51,8 @@ public formBuilder!: FormBuilder;
   }
 //regexp: regular expression
   ngOnInit(): void {
-    this.formAsignatura = this.formBuilder.group({
-      asignatura: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+$/)]]
+    this.crearAsignaturaForm = this.formBuilder.group({
+      nombreAsignatura: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+$/)]]
     });
   }
 }

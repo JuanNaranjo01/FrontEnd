@@ -46,7 +46,7 @@ export class EditarAsignaturaComponent implements OnInit{
   editarAsignatura(asignatura: Asignatura) {
     this.asignaturaService.editarAsignatura(asignatura).subscribe( // Le decimos al servicio que edite la asignatura
       (asignatura: Asignatura) => {
-        // console.log(curso);
+        console.log(asignatura);
         Swal.fire( // Le decimos al usuario que la asignatura ha sido editado
           'Asigantura editada',
           `La asignatura ${asignatura.nombreAsignatura} ha sido actualizado con exito`,
@@ -56,9 +56,6 @@ export class EditarAsignaturaComponent implements OnInit{
       });
   }
 
-  /**
-   * Metodo que se ejecuta al iniciar el componente
-   */
 
   ngOnInit(): void {
     const idAsignatura = parseInt(this.route.snapshot.params['id']); // Obtenemos el id del curso a editar

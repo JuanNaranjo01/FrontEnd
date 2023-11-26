@@ -43,6 +43,13 @@ export class ListarAsignaturasComponent implements OnInit {
     this.routerPath.navigate(['/editar/' + this.asignaturaSelected.codAsignatura]); //Redirecciona a la ruta /editar/:id
   }
 
+  editarAsignatura(asignatura: Asignatura) {
+    this.asignaturaSelected = asignatura;
+    this.selected = true;
+    this.routerPath.navigate(['/editar/' + this.asignaturaSelected.codAsignatura]);
+
+  }
+
   /**
    * Metodo que elimina un curso seleccionado de la lista
    * @param asignatura Curso a eliminar

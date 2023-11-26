@@ -13,10 +13,6 @@ export class AsignaturaService {
 
   }
 
-  /**
-   * Metodo que obtiene los cursos
-   * @returns Observable<Asignatura[]> Lista de cursos
-   */
   getAsignaturas(): Observable<Asignatura[]> {
     return this.httpClient.get<Asignatura[]>(this.baseUrl+"/asignaturas")
 
@@ -24,12 +20,6 @@ export class AsignaturaService {
   getAsignatura(idAsignatura: number): Observable<Asignatura> {
     return this.httpClient.get<Asignatura>(this.baseUrl + '/asignatura/' + idAsignatura);
   }
-
-
-  /**
-   * Metodo que crea un curso
-   * @param asignatura Curso a crear
-   */
 
 
   crearAsignatura(asignatura: Asignatura): Observable<Asignatura> {
