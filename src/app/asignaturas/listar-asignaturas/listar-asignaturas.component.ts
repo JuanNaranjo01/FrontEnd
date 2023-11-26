@@ -40,7 +40,7 @@ export class ListarAsignaturasComponent implements OnInit {
     this.asignaturaSelected = asignatura;
     this.selected=true;
     // console.log(this.cursoSelected); //Imprime en la consola del navegador el curso seleccionado
-    this.routerPath.navigate(['/editar/' + this.asignaturaSelected.id]); //Redirecciona a la ruta /editar/:id
+    this.routerPath.navigate(['/editar/' + this.asignaturaSelected.codAsignatura]); //Redirecciona a la ruta /editar/:id
   }
 
   /**
@@ -59,7 +59,7 @@ export class ListarAsignaturasComponent implements OnInit {
       confirmButtonText: "Si, borra la asignatura!"
     }).then((result) => {
       if (result.isConfirmed) {
-        this.asignaturaService.borrarAsignatura(asignatura.id).subscribe(() => { // Llama al servicio para eliminar el curso
+        this.asignaturaService.borrarAsignatura(asignatura.codAsignatura).subscribe(() => { // Llama al servicio para eliminar el curso
           Swal.fire({
             title: "Eliminado!",
             text: "La asignatura ha sido eliminada.",

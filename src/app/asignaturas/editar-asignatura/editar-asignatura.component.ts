@@ -49,7 +49,7 @@ export class EditarAsignaturaComponent implements OnInit{
         // console.log(curso);
         Swal.fire( // Le decimos al usuario que la asignatura ha sido editado
           'Asigantura editada',
-          `La asignatura ${asignatura.nombre} ha sido actualizado con exito`,
+          `La asignatura ${asignatura.nombreAsignatura} ha sido actualizado con exito`,
           'success'
         );
         this.router.navigate(['/listar']); //Redirecciona a la ruta /listar
@@ -67,8 +67,8 @@ export class EditarAsignaturaComponent implements OnInit{
       this.asignatura = asignatura; // Obtenemos el curso a editar
       // console.log(this.curso);
       this.editarAsignaturaForm = this.formBuilder.group({ // Creamos el formulario editarCursoForm
-        nombre: [this.asignatura.nombre, [Validators.required, Validators.minLength(4)]], // Mostramos el nombre del curso
-        id: [this.asignatura.id, []], // mostramos el Id del curso. El id no se puede editar
+        nombre: [this.asignatura.nombreAsignatura, [Validators.required, Validators.minLength(4)]], // Mostramos el nombre del curso
+        id: [this.asignatura.codAsignatura, []], // mostramos el Id del curso. El id no se puede editar
       });
     });
   }

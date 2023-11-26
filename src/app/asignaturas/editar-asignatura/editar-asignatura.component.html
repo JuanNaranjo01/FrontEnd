@@ -5,8 +5,8 @@
 
 
     <form [formGroup]="editarAsignaturaForm" (ngSubmit)="editarAsignatura(editarAsignaturaForm.value)">
-      <div class="row ">
-        <div class="col  ">
+      <div class="rowED">
+        <div class="col ">
 
           <!--    Campo curso (nombre del curso)      -->
           <label for="asignatura">Nombre</label>
@@ -29,12 +29,12 @@
           >
           <br>
 
-          <div class="row justify-content-center mt-3">
+          <div class="rowED2 justify-content-center mt-3">
             <div class="col-6">
-              <button type="submit" class="btn btn-primary btn-block">Editar asignatura</button>
+              <button type="submit" class="btn btn-primaryED btn-block">Editar asignatura</button>
             </div>
             <div class="col-6">
-              <button type="button" class="btn btn-danger btn-block" (click)="cancelarEditarAsignatura()">Cancelar</button>
+              <button type="button" class="btn btn-dangerED btn-block" (click)="cancelarEditarAsignatura()">Cancelar</button>
             </div>
           </div>
         </div>

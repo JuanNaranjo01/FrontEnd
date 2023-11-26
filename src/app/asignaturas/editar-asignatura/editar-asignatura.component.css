@@ -1,0 +1,69 @@
+.rowed {
+  top: 100px;
+  width: 360px;
+  height: 50px;
+  font-family: Montserrat;
+  font-size: 14px;
+  opacity: 1;
+  position: absolute;
+  left: 310px;
+
+}
+
+
+
+.btn-primary1{
+  width: 150px;
+  height: 50px;
+  font-family: Montserrat;
+  font-size: 14px;
+  opacity: 1;
+  position: absolute;
+  top: 90px;
+  left: 420px;
+  border-radius: 5px;
+  background: #feaf00;
+  border: 2px;
+}
+
+
+.btn-danger2{
+  width: 150px;
+  height: 50px;
+  font-family: Montserrat;
+  font-size: 14px;
+  opacity: 1;
+  position: absolute;
+  top: 90px;
+  left: 210px;
+  border-radius: 5px;
+  border: 2px solid #c2c2c2;
+}
+
+.btn-dangerCA:hover{
+  background-color: #f0e8df;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  margin-bottom: 5px;
+}
+
+car{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+

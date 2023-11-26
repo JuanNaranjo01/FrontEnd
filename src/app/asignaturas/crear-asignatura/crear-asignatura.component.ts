@@ -6,24 +6,23 @@ import {AsignaturaService} from "../service/asignatura.service";
 import {Asignatura} from "../model/asignatura";
 
 
+
 @Component({
   selector: 'app-crear-asignatura',
   templateUrl: './crear-asignatura.component.html',
   styleUrls: ['./crear-asignatura.component.css']
 })
 export class CrearAsignaturaComponent implements OnInit {
-  public crearAsignaturaForm: FormGroup= new FormGroup({
-    nombre: new FormControl('',[Validators.required,Validators.minLength(4)]),
-  });
+  public crearAsignaturaForm: FormGroup= new FormGroup({codAsignatura: new FormControl(""),nombreAsignatura: new FormControl("")});
 
-  /**
-   * Constructor del componente
-   * @param router Router de la aplicacion
-   * @param formBuilder Formulario de creacion de curso
-   * @param asignaturaService Servicio de curso para crear un curso
-   */
-  constructor(public router: Router, public formBuilder: FormBuilder, private asignaturaService: AsignaturaService) {
+  public formAsignatura!: FormGroup;
 
+public formBuilder!: FormBuilder;
+
+
+  constructor(public router: Router, formBuilder: FormBuilder, private asignaturaService: AsignaturaService) {
+
+    this.formBuilder= formBuilder;
   }
 
   /**
@@ -43,7 +42,7 @@ export class CrearAsignaturaComponent implements OnInit {
         // console.log(curso);
         Swal.fire(
           'Asignatura creada',
-          `La asignatura ${asignatura.nombre} ha sido creado con exito`,
+          `La asignatura ${asignatura.nombreAsignatura} ha sido creado con exito`,
           'success'
         );
         this.crearAsignaturaForm.reset();  //Resetea el formulario
@@ -52,7 +51,7 @@ export class CrearAsignaturaComponent implements OnInit {
   }
 //regexp: regular expression
   ngOnInit(): void {
-    this.crearAsignaturaForm = this.formBuilder.group({
+    this.formAsignatura = this.formBuilder.group({
       asignatura: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+$/)]]
     });
   }

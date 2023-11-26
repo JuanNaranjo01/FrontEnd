@@ -7,7 +7,7 @@ import {map, Observable} from "rxjs";
   providedIn: 'root'
 })
 export class AsignaturaService {
-  private baseUrl: string = "http://localhost:8080"
+  private baseUrl: string = "http://18.224.58.22/api/asignatura-service"
 
   constructor(private httpClient: HttpClient) {
 
@@ -18,15 +18,11 @@ export class AsignaturaService {
    * @returns Observable<Asignatura[]> Lista de cursos
    */
   getAsignaturas(): Observable<Asignatura[]> {
-    return this.httpClient.get<Asignatura[]>(this.baseUrl+"/asignaturaes")
-      .pipe(
-        map((result:any)=>{
-          console.log(result._embedded.cursoes);
-          return result._embedded.cursoes;
-        }));
+    return this.httpClient.get<Asignatura[]>(this.baseUrl+"/asignaturas")
+
   }
   getAsignatura(idAsignatura: number): Observable<Asignatura> {
-    return this.httpClient.get<Asignatura>(this.baseUrl + '/asignaturaes/' + idAsignatura);
+    return this.httpClient.get<Asignatura>(this.baseUrl + '/asignatura/' + idAsignatura);
   }
 
 
@@ -37,14 +33,14 @@ export class AsignaturaService {
 
 
   crearAsignatura(asignatura: Asignatura): Observable<Asignatura> {
-    return this.httpClient.post<Asignatura>(this.baseUrl+"/asignaturaes", asignatura);
+    return this.httpClient.post<Asignatura>(this.baseUrl+"/asignatura", asignatura);
   }
   editarAsignatura(asignatura: Asignatura): Observable<Asignatura> {
-    return this.httpClient.put<Asignatura>(this.baseUrl+"/asignaturaes/"+asignatura.id, asignatura);
+    return this.httpClient.put<Asignatura>(this.baseUrl+"/asignatura/"+asignatura.codAsignatura, asignatura);
   }
 
   borrarAsignatura(idAsignatura: number): Observable<any> {
-    return this.httpClient.delete(this.baseUrl + "/asignaturaes/" + idAsignatura);
+    return this.httpClient.delete(this.baseUrl + "/asignatura/" + idAsignatura);
   }
 
 }
