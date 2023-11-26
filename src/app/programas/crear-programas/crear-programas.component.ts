@@ -36,6 +36,7 @@ export class CrearProgramasComponent implements OnInit{
           'success'
         );
         this.crearProgramasForm.reset();
+        this.router.navigate(['/listar']);
       });
   }
 
