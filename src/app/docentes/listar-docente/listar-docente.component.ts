@@ -36,7 +36,7 @@ ngOnInit():void {
 onSelected(docente: Docente) {
   this.docenteSelected = docente;
   this.selected = true;
-  this.routerPath.navigate(['/editar/' + this.docenteSelected.id]);
+  this.routerPath.navigate(['/editar/' + this.docenteSelected.docenteId]);
 }
 
   borrarDocente(docente: Docente) {
@@ -51,7 +51,7 @@ onSelected(docente: Docente) {
       confirmButtonText: "Yes, borra el usuario!"
     }).then((result) => {
       if (result.isConfirmed) {
-        this.docenteService.borrarDocente(docente.id).subscribe(() => {
+        this.docenteService.borrarDocente(docente.docenteId).subscribe(() => {
           Swal.fire({
             title: "Eliminado!",
             text: "El usuario ha sido eliminado.",

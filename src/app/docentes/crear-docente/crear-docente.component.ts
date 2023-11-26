@@ -15,12 +15,11 @@ export class CrearDocenteComponent implements OnInit{
 
   public crearDocenteForm: FormGroup= new FormGroup({
     id: new FormControl('',[Validators.required,Validators.minLength(4)]),
-    cargo: new FormControl('',[Validators.required,Validators.minLength(4)]),
     nombre: new FormControl('',[Validators.required,Validators.minLength(4)]),
     apellido: new FormControl('',[Validators.required,Validators.minLength(4)]),
     telefono: new FormControl('',[Validators.required,Validators.minLength(4)]),
-    asignatura: new FormControl('',[Validators.required,Validators.minLength(4)]),
     correo: new FormControl('',[Validators.required,Validators.minLength(4)]),
+    asignatura: new FormControl('',[Validators.required,Validators.minLength(4)]),
     facultad: new FormControl('',[Validators.required,Validators.minLength(4)])
   });
 
@@ -48,12 +47,11 @@ export class CrearDocenteComponent implements OnInit{
   ngOnInit(): void {
     this.crearDocenteForm = this.formBuilder.group({
       id: new FormControl('',[Validators.required,Validators.minLength(4)]),
-      cargo: new FormControl('',[Validators.required,Validators.minLength(4)]),
       nombre: new FormControl('',[Validators.required,Validators.minLength(4)]),
       apellido: new FormControl('',[Validators.required,Validators.minLength(4)]),
       telefono: new FormControl('',[Validators.required,Validators.minLength(4)]),
-      asignatura: new FormControl('',[Validators.required,Validators.minLength(4)]),
       correo: new FormControl('',[Validators.required,Validators.minLength(4)]),
+      asignatura: new FormControl('',[Validators.required,Validators.minLength(4)]),
       facultad: new FormControl('',[Validators.required,Validators.minLength(4)])
     });
   }

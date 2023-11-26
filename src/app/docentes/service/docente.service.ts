@@ -7,34 +7,30 @@ import {Docente} from "../model/docente";
   providedIn: 'root'
 })
 export class DocenteService {
-  private baseUrl: string="https://gist.githubusercontent.com/Jcamiloag/3e88024b7e0c5e49970faad9705632a9/raw/041b6a8b3a0496fbf6f3b17f19140559941b362a/gistfile1.txt"
+  private baseUrl: string="http://18.191.74.195:8082/api/v1/user-service"
 
   constructor(private httpClient: HttpClient) {
 
   }
 
   getDocentes():Observable<Docente[]>{
-    return  this.httpClient.get<Docente[]>(this.baseUrl+"/docentees")
-      .pipe(
-        map((result:any)=>{
-          console.log(result._embedded.docentees);
-          return result._embedded.docentees;
-        }));
+    return  this.httpClient.get<Docente[]>(this.baseUrl+"/docente")
+
   }
   getDocente(idDocente: number ): Observable<Docente>{
-    return this.httpClient.get<Docente>(this.baseUrl + '/docentees/'+idDocente);
+    return this.httpClient.get<Docente>(this.baseUrl + '/docente/'+idDocente);
   }
 
 
   crearDocente(docente: Docente):Observable<Docente> {
-    return this.httpClient.post<Docente>(this.baseUrl+"/docentees", docente);
+    return this.httpClient.post<Docente>(this.baseUrl+"/docente", docente);
 
   }
   borrarDocente(idDocente: number): Observable<any> {
-    return this.httpClient.delete(this.baseUrl + "/docentees/" + idDocente);
+    return this.httpClient.delete(this.baseUrl + "/docente/" + idDocente);
   }
 
   editarDocente(docente: Docente): Observable<Docente>{
-  return this.httpClient.put<Docente>(this.baseUrl+"/docentees"+ docente.id, docente);
+  return this.httpClient.put<Docente>(this.baseUrl+"/docente"+ docente.docenteId, docente);
   }
 }

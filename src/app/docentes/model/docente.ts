@@ -1,11 +1,10 @@
 export class Docente{
 
-  public id!: number;
-  public cargo!: string;
+  public docenteId!: number;
   public nombre!: string;
   public apellido!: string;
   public telefono!: string;
-  public asignatura!: string;
   public correo!: string;
+  public asignatura!: string;
   public facultad!: string;
 }

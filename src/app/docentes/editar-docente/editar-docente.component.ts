@@ -13,12 +13,11 @@ export class EditarDocenteComponent implements OnInit{
 
   public editarDocenteForm: FormGroup= new FormGroup({
     id: new FormControl('',[Validators.required,Validators.minLength(4)]),
-    cargo: new FormControl('',[Validators.required,Validators.minLength(4)]),
     nombre: new FormControl('',[Validators.required,Validators.minLength(4)]),
     apellido: new FormControl('',[Validators.required,Validators.minLength(4)]),
     telefono: new FormControl('',[Validators.required,Validators.minLength(4)]),
-    asignatura: new FormControl('',[Validators.required,Validators.minLength(4)]),
     correo: new FormControl('',[Validators.required,Validators.minLength(4)]),
+    asignatura: new FormControl('',[Validators.required,Validators.minLength(4)]),
     facultad: new FormControl('',[Validators.required,Validators.minLength(4)])
   });
 
@@ -71,13 +70,13 @@ export class EditarDocenteComponent implements OnInit{
       // console.log(this.curso);
       this.editarDocenteForm = this.formBuilder.group({ // Creamos el formulario editarCursoForm
 
-        id: [this.docente.id, []], // mostramos el Id del curso. El id no se puede editar
-        cargo: [this.docente.cargo, [Validators.required, Validators.minLength(4)]], // Mostramos el nombre del curso
+        id: [this.docente.docenteId, []], // mostramos el Id del curso. El id no se puede editar
+
         nombre: [this.docente.nombre, [Validators.required, Validators.minLength(4)]], // Mostramos el nombre del curso
         apellido: [this.docente.apellido, [Validators.required, Validators.minLength(4)]], // Mostramos el programa del curso
         telefono: [this.docente.telefono, [Validators.required, Validators.minLength(4)]], // Mostramos el programa del curso
-        asignatura: [this.docente.asignatura, [Validators.required, Validators.minLength(4)]], // Mostramos el programa del curso
         correo: [this.docente.correo, [Validators.required, Validators.minLength(4)]], // Mostramos el programa del curso
+        asignatura: [this.docente.asignatura, [Validators.required, Validators.minLength(4)]], // Mostramos el programa del curso
         facultad: [this.docente.facultad, [Validators.required, Validators.minLength(4)]] // Mostramos el programa del curso
       });
     });

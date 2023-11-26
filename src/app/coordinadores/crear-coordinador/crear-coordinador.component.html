@@ -1,24 +1,7 @@
 <form [formGroup]="crearCoordinadorForm" (ngSubmit)="crearCoordinador(crearCoordinadorForm.value)">
   <div class="row rowfirst">
     <div class="col col-70">
-      <label for="id">Id</label>
-      <input id="id"
-             type="number"
-             name="id"
-             placeholder="Ingrese su id "
-             formControlName="id"
-             class="form-control"
 
-      >
-      <label for="cargo">Cargo</label>
-      <input id="cargo"
-             type="text"
-             name="cargo"
-             placeholder="Ingrese su tipo de cargo "
-             formControlName="cargo"
-             class="form-control"
-
-      >
       <div class="col col-70">
         <label for="nombre">Nombre</label>
         <input id="nombre"
@@ -46,15 +29,6 @@
                    formControlName="telefono"
                    class="form-control"
             >
-            <div class="col col-70">
-              <label for="asignatura">Asignatura</label>
-              <input id="asignatura"
-                     type="text"
-                     name="asignatura"
-                     placeholder="Ingrese la asignatura a la que pertenece"
-                     formControlName="asignatura"
-                     class="form-control"
-              >
               <div class="col col-70">
                 <label for="correo">Correo</label>
                 <input id="correo"
@@ -64,29 +38,19 @@
                        formControlName="correo"
                        class="form-control"
                 >
-                <div class="col col-70">
-                  <label for="facultad">Facultad</label>
-                  <input id="facultad"
-                         type="text"
-                         name="facultad"
-                         placeholder="Ingrese la facultad a la que pertenece"
-                         formControlName="facultad"
-                         class="form-control"
-                  >
+
                 </div>
               </div>
               <div class="row rowsec">
                 <div class="col col-4">
-                  <button type="button" class="btn btn-primaryCA">Guardar</button>
+                  <button type="submit" class="btn btn-primaryCA">Guardar</button>
                   <button type="button" class="btn btn-dangerCA" (click)="cancelarCrearCoordinador()">Cancelar</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
-  </div>
 </form>
 
 

@@ -14,17 +14,21 @@ import {Coordinador} from "../model/coordinador";
 export class CrearCoordinadorComponent implements OnInit{
 
   public crearCoordinadorForm: FormGroup= new FormGroup({
-    id: new FormControl('',[Validators.required,Validators.minLength(4)]),
-    cargo: new FormControl('',[Validators.required,Validators.minLength(4)]),
-    nombre: new FormControl('',[Validators.required,Validators.minLength(4)]),
-    apellido: new FormControl('',[Validators.required,Validators.minLength(4)]),
-    telefono: new FormControl('',[Validators.required,Validators.minLength(4)]),
-    asignatura: new FormControl('',[Validators.required,Validators.minLength(4)]),
-    correo: new FormControl('',[Validators.required,Validators.minLength(4)]),
-    facultad: new FormControl('',[Validators.required,Validators.minLength(4)])
-  });
+    coordinadorId: new FormControl(''),
+    nombre: new FormControl(''),
+    apellido: new FormControl(''),
+    telefono: new FormControl(''),
+    correo: new FormControl(''),
 
-  constructor(public router: Router,public formBuilder: FormBuilder, private coordinadorService: CoordinadorService) {
+  });
+  public formCoordinador!:FormGroup;
+
+
+
+  public  formBuilder!:FormBuilder;
+
+  constructor(public router: Router, formBuilder: FormBuilder, private coordinadorService: CoordinadorService) {
+    this.formBuilder = formBuilder;
   }
 
   cancelarCrearCoordinador() {
@@ -46,15 +50,12 @@ export class CrearCoordinadorComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.crearCoordinadorForm = this.formBuilder.group({
-      id: new FormControl('',[Validators.required,Validators.minLength(4)]),
-      cargo: new FormControl('',[Validators.required,Validators.minLength(4)]),
-      nombre: new FormControl('',[Validators.required,Validators.minLength(4)]),
-      apellido: new FormControl('',[Validators.required,Validators.minLength(4)]),
-      telefono: new FormControl('',[Validators.required,Validators.minLength(4)]),
-      asignatura: new FormControl('',[Validators.required,Validators.minLength(4)]),
-      correo: new FormControl('',[Validators.required,Validators.minLength(4)]),
-      facultad: new FormControl('',[Validators.required,Validators.minLength(4)])
+    this.formCoordinador = this.formBuilder.group({
+      nombre: ['', Validators.required,Validators.minLength(4)],
+      apellido: ['', Validators.required,Validators.minLength(4)],
+      telefono: ['', Validators.required,Validators.minLength(4)],
+      correo: ['', Validators.required,Validators.minLength(4)],
+
     });
   }
 

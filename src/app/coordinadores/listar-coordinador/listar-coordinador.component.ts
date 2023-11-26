@@ -36,7 +36,7 @@ export class ListarCoordinadorComponent implements OnInit{
   onSelected(coordinador: Coordinador) {
     this.coordinadorSelected = coordinador;
     this.selected = true;
-    this.routerPath.navigate(['/editar/' + this.coordinadorSelected.id]);
+    this.routerPath.navigate(['/editar/' + this.coordinadorSelected.coordinadorId]);
   }
 
   borrarCoordinador(coordinador: Coordinador) {
@@ -51,7 +51,7 @@ export class ListarCoordinadorComponent implements OnInit{
       confirmButtonText: "Yes, borra el usuario!"
     }).then((result) => {
       if (result.isConfirmed) {
-        this.coordinadorService.borrarCoordinador(coordinador.id).subscribe(() => {
+        this.coordinadorService.borrarCoordinador(coordinador.coordinadorId).subscribe(() => {
           Swal.fire({
             title: "Eliminado!",
             text: "El usuario ha sido eliminado.",

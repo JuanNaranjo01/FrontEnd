@@ -7,34 +7,30 @@ import {Injectable} from "@angular/core";
   providedIn: 'root'
 })
 export class CoordinadorService {
-  private baseUrl: string="https://gist.githubusercontent.com/Jcamiloag/3e88024b7e0c5e49970faad9705632a9/raw/041b6a8b3a0496fbf6f3b17f19140559941b362a/gistfile1.txt"
+  private baseUrl: string="http://18.191.74.195:8082/api/v1/user-service"
 
   constructor(private httpClient: HttpClient) {
 
   }
 
   getCoordinadores():Observable<Coordinador[]>{
-    return  this.httpClient.get<Coordinador[]>(this.baseUrl+"/coordinadores")
-      .pipe(
-        map((result:any)=>{
-          console.log(result._embedded.docentees);
-          return result._embedded.docentees;
-        }));
+    return  this.httpClient.get<Coordinador[]>(this.baseUrl+"/coordinador")
+
   }
   getCoordinador(idCoordinador: number ): Observable<Coordinador>{
-    return this.httpClient.get<Coordinador>(this.baseUrl + '/coordinadores/'+idCoordinador);
+    return this.httpClient.get<Coordinador>(this.baseUrl + '/coordinador/'+idCoordinador);
   }
 
 
   crearCoordinador(coordinador: Coordinador):Observable<Coordinador> {
-    return this.httpClient.post<Coordinador>(this.baseUrl+"/coordinadores", coordinador);
+    return this.httpClient.post<Coordinador>(this.baseUrl+"/coordinador", coordinador);
 
   }
   borrarCoordinador(idCoordinador: number): Observable<any> {
-    return this.httpClient.delete(this.baseUrl + "/coordinadores/" + idCoordinador);
+    return this.httpClient.delete(this.baseUrl + "/coordinador/" + idCoordinador);
   }
 
   editarCoordinador(coordinador: Coordinador): Observable<Coordinador>{
-    return this.httpClient.put<Coordinador>(this.baseUrl+"/coordinadores"+ coordinador.id, coordinador);
+    return this.httpClient.put<Coordinador>(this.baseUrl+"/coordinador"+ coordinador.coordinadorId, coordinador);
   }
 }
