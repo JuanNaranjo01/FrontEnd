@@ -1,0 +1,45 @@
+<div class="card mx-auto" style="max-width: 500px;">
+  <div class="card-body">
+    <h5 class="card-title">Crear Sala</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Datos de la sala</h6>
+
+    <form [formGroup]="crearCursoForm" (ngSubmit)="crearCurso(crearCursoForm.value)">
+      <div class="row">
+        <div class="col">
+
+          <!--   Campo nombre del curso   -->
+          <label for="curso">Sala</label>
+          <input id="curso"
+                 type="text"
+                 name="curso"
+                 placeholder="Escriba el nombre de la sala aqui"
+                 formControlName="curso"
+                 class="form-control"
+          >
+
+          <!-- Campo programa del curso -->
+          <label for="programa">Tipo aula</label>
+          <input id="programa"
+                 type="text"
+                 name="programa"
+                 placeholder="Ingrese el Tipo aula al que pertenece"
+                 formControlName="programa"
+                 class="form-control"
+          >
+        </div>
+
+        <br>
+
+        <div class="row justify-content-center mt-3">
+          <div class="col-6">
+            <button type="submit" class="btn btn-primary btn-block">Crear sala</button>
+          </div>
+          <div class="col-6">
+            <button type="button" class="btn btn-danger btn-block" (click)="cancelarCrearCurso()">Cancelar</button>
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>
