@@ -359,7 +359,7 @@ th, td {
 }
 
 
-/*.anadir-button{
+.anadir-button{
   width: 200px;
   height: 40px;
   padding: 10px;
@@ -379,7 +379,7 @@ th, td {
   opacity: 1;
   font-size: 14px;
   overflow: hidden;
-}*/
+}
 
 
 .v1_85 {
