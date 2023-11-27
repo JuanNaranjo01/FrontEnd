@@ -1,3 +1,22 @@
-.clickable {
-    cursor: pointer;
+.table {
+  width: 802px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  font-family: Montserrat;
+  font-size: 14px;
+  opacity: 1;
+  position: absolute;
+  top: 215px;
+  left: 300px;
+  overflow-y: auto;
+}
+
+tr:nth-child(odd) {
+  background-color: #fff; /* color blanco */
+}
+
+tr:nth-child(even) {
+  background-color: #c0c0c0;; /* color gris claro */
 }
