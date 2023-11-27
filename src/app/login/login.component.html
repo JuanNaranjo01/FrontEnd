@@ -5,38 +5,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./login.component.css">
 </head>
 
 <body>
 <div class="login-container">
-  <div class="title-container">
+  <header class="title-container">
     <div class="title-line"></div>
-    <div class="title-text">ASIGNACIÓN DE SALAS</div>
-  </div>
-  <div>
+    <h1 class="title-text">ASIGNACIÓN DE SALAS</h1>
+  </header>
+  <section>
     <div class="sign-in-title">Sign In</div>
     <div class="instruction-text">Enter your credentials to access your account</div>
-  </div>
-  <div class="form-container">
-    <div class="input-field">
-      <h3>Email</h3>
-      <input type="text" placeholder="Enter your Email">
-    </div>
-    <div class="input-field">
-      <h3>Password</h3>
-      <input type="password" placeholder="Enter your Password">
-    </div>
+  </section>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-container" role="form">
+    <section class="input-field">
+      <h2>Username</h2>
+      <input type="text" formControlName="username" placeholder="Enter your Username">
+    </section>
+    <section class="input-field">
+      <h2>Password</h2>
+      <input type="password" formControlName="password" placeholder="Enter your Password">
+    </section>
     <button type="submit" class="sign-in-button">SIGN IN</button>
-  </div>
-  <div class="forgot-password">
+  </form>
+  <footer class="forgot-password">
     <span class="text-gray">Forgot your password?</span>
-    <span class="text-black"> </span>
-    <a href="" class="reset-password-link">Reset Password</a>
-  </div>
+    <a href="#" class="reset-password-link">Reset Password</a>
+  </footer>
 </div>
-
-
 </body>
 
 </html>
