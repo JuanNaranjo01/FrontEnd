@@ -1,0 +1,346 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.1.2",
+  "deps": {
+    "@angular/animations": "^16.2.0",
+    "@angular/common": "^16.2.0",
+    "@angular/compiler": "^16.2.0",
+    "@angular/core": "^16.2.0",
+    "@angular/forms": "^16.2.0",
+    "@angular/platform-browser": "^16.2.0",
+    "@angular/platform-browser-dynamic": "^16.2.0",
+    "@angular/router": "^16.2.0",
+    "@nrwl/angular": "^17.1.2",
+    "@popperjs/core": "^2.11.8",
+    "@sweetalert2/ngx-sweetalert2": "^12.2.0",
+    "bootstrap": "~5.3.2",
+    "install": "^0.13.0",
+    "jquery": "^3.7.1",
+    "rxjs": "~7.8.0",
+    "sweetalert2": "^11.6.13",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.13.0",
+    "@angular-devkit/build-angular": "^16.2.7",
+    "@angular/cli": "^16.2.7",
+    "@angular/compiler-cli": "^16.2.0",
+    "@types/jasmine": "~4.3.0",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.1.3"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {
+      "FrontEnd": [
+        {
+          "file": ".editorconfig",
+          "hash": "17241496168097493888"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "4689145951703824387"
+        },
+        {
+          "file": ".nx/cache/file-map.json",
+          "hash": "16126666310741178484"
+        },
+        {
+          "file": ".nx/cache/lockfile.hash",
+          "hash": "5213123889416643250"
+        },
+        {
+          "file": ".nx/cache/parsed-lock-file.json",
+          "hash": "2877792535615209103"
+        },
+        {
+          "file": ".nx/cache/project-graph.json",
+          "hash": "2507181086537747507"
+        },
+        {
+          "file": ".vscode/extensions.json",
+          "hash": "11934160580685414355"
+        },
+        {
+          "file": ".vscode/launch.json",
+          "hash": "17406702432687230417"
+        },
+        {
+          "file": ".vscode/tasks.json",
+          "hash": "10093397977228577162"
+        },
+        {
+          "file": "README.md",
+          "hash": "16007542248948483168"
+        },
+        {
+          "file": "angular.json",
+          "hash": "12026761335113854024"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "10911804097799253457"
+        },
+        {
+          "file": "package.json",
+          "hash": "4761084438584485566",
+          "deps": [
+            "npm:@angular/animations",
+            "npm:@angular/common",
+            "npm:@angular/compiler",
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/platform-browser",
+            "npm:@angular/platform-browser-dynamic",
+            "npm:@angular/router",
+            "npm:@nrwl/angular",
+            "npm:@popperjs/core",
+            "npm:@sweetalert2/ngx-sweetalert2",
+            "npm:bootstrap",
+            "npm:install",
+            "npm:jquery",
+            "npm:rxjs",
+            "npm:sweetalert2",
+            "npm:tslib",
+            "npm:zone.js",
+            "npm:@angular-devkit/build-angular",
+            "npm:@angular/cli",
+            "npm:@angular/compiler-cli",
+            "npm:@types/jasmine",
+            "npm:jasmine-core",
+            "npm:karma",
+            "npm:karma-chrome-launcher",
+            "npm:karma-coverage",
+            "npm:karma-jasmine",
+            "npm:karma-jasmine-html-reporter",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "src/app/app.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/app.component.html",
+          "hash": "4720834426923699573"
+        },
+        {
+          "file": "src/app/app.component.spec.ts",
+          "hash": "17532237564177305680",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "hash": "13674549104385947220",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/app.module.ts",
+          "hash": "13225944714861413185",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/router",
+            "npm:@angular/common",
+            "npm:@sweetalert2/ngx-sweetalert2"
+          ]
+        },
+        {
+          "file": "src/app/footer/footer.component.css",
+          "hash": "1003948133586968652"
+        },
+        {
+          "file": "src/app/footer/footer.component.html",
+          "hash": "153555979491263394"
+        },
+        {
+          "file": "src/app/footer/footer.component.spec.ts",
+          "hash": "1944692066901072230",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/footer/footer.component.ts",
+          "hash": "9244250186453533051",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/header/header.component.css",
+          "hash": "3698365481528398336"
+        },
+        {
+          "file": "src/app/header/header.component.html",
+          "hash": "5225119988483727159"
+        },
+        {
+          "file": "src/app/header/header.component.spec.ts",
+          "hash": "372101361241028373",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/header/header.component.ts",
+          "hash": "8420120631935814218",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/salas/crear-sala/crear-sala.component.css",
+          "hash": "15981848365311143724"
+        },
+        {
+          "file": "src/app/salas/crear-sala/crear-sala.component.html",
+          "hash": "15530490743565201654"
+        },
+        {
+          "file": "src/app/salas/crear-sala/crear-sala.component.spec.ts",
+          "hash": "2790878662580538633",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/salas/crear-sala/crear-sala.component.ts",
+          "hash": "13813771499429933849",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/router",
+            "npm:sweetalert2"
+          ]
+        },
+        {
+          "file": "src/app/salas/detalle-sala/detalle-sala.component.css",
+          "hash": "8643381682514263301"
+        },
+        {
+          "file": "src/app/salas/detalle-sala/detalle-sala.component.html",
+          "hash": "15613699498887150454"
+        },
+        {
+          "file": "src/app/salas/detalle-sala/detalle-sala.component.spec.ts",
+          "hash": "16563763195589138102",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/salas/detalle-sala/detalle-sala.component.ts",
+          "hash": "13164647979233537242",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/salas/listar-salas/listar-salas.component.css",
+          "hash": "13901911095619847005"
+        },
+        {
+          "file": "src/app/salas/listar-salas/listar-salas.component.html",
+          "hash": "738188594766263236"
+        },
+        {
+          "file": "src/app/salas/listar-salas/listar-salas.component.spec.ts",
+          "hash": "8118778669267937448",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/salas/listar-salas/listar-salas.component.ts",
+          "hash": "5480482402668517472",
+          "deps": [
+            "npm:@angular/core",
+            "npm:sweetalert2"
+          ]
+        },
+        {
+          "file": "src/app/salas/model/sala.ts",
+          "hash": "10546025055558473653"
+        },
+        {
+          "file": "src/app/salas/salas-routing.module.ts",
+          "hash": "16642182822010423039",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/salas/salas.module.ts",
+          "hash": "16262765555585085539",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "src/app/salas/service/sala.service.spec.ts",
+          "hash": "17081708014644420930",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/salas/service/sala.service.ts",
+          "hash": "12216296900553333600",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/favicon.ico",
+          "hash": "3988961587069885523"
+        },
+        {
+          "file": "src/index.html",
+          "hash": "7071023234128838595"
+        },
+        {
+          "file": "src/main.ts",
+          "hash": "14952978764792272270",
+          "deps": [
+            "npm:@angular/platform-browser-dynamic"
+          ]
+        },
+        {
+          "file": "src/styles.css",
+          "hash": "2917954890128038984"
+        },
+        {
+          "file": "tsconfig.app.json",
+          "hash": "4215804490484784415"
+        },
+        {
+          "file": "tsconfig.json",
+          "hash": "5537191522373868648"
+        },
+        {
+          "file": "tsconfig.spec.json",
+          "hash": "5122839733245053999"
+        }
+      ]
+    },
+    "nonProjectFiles": []
+  }
+}

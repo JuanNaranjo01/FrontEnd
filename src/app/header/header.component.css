@@ -1,0 +1,395 @@
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+
+th, td {
+  border: 1px solid black; /* Bordes sólidos de 1px de grosor en color negro */
+}
+.html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 14px;
+
+}
+
+.navbar {
+  position: relative;
+}
+
+.navbar form {
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  z-index: 999;
+}
+
+.btn-outline-success {
+  background-color: transparent;
+}
+
+.navbar button {
+  width: 199px;
+  height: 44px;
+  background: rgba(254, 175, 0, 1);
+  position: marker;
+  top: 80px;
+  left:0px;
+  border-style: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  overflow: hidden;
+  font-family: Montserrat;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 1);
+  opacity: 1;
+  font-size: 14px;
+}
+
+
+.titulo {
+  width: 15px;
+  color: rgba(0,0,0,1);
+  position:relative;
+  top: 65px;
+  left: 300px;
+  font-family: Montserrat;
+  font-weight: Bold;
+  font-size: 22px;
+  opacity: 1;
+  text-align: left;
+}
+
+
+.content {
+
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+
+}
+
+/*botón*/
+
+
+.content table{
+  width: 1070px;
+  height: 44px;
+  font-family: Montserrat;
+  position:relative;
+  top: 30px;
+  right: 120px;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+
+
+.sidebar {
+  width: 270px;
+  height: 100vh;
+  background: rgba(242,234,225,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.posicion-texto {
+  width: 200px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 18px;
+  left: 30px;
+  overflow: hidden;
+}
+
+.servicio {
+  width: 139px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  font-family: Montserrat;
+  font-weight: Bold;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+
+.posicion-sidebar {
+  width: 193px;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 66px;
+  left: 31px;
+  overflow: hidden;
+}
+
+.v1_86 {
+  width: 41px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 148px;
+  left: 76px;
+  font-family: Montserrat;
+  font-weight: Bold;
+  font-size: 17px;
+  opacity: 1;
+  text-align: left;
+}
+
+.v1_87 {
+  width: 48px;
+  color: rgba(254, 175, 0, 1);
+  position: absolute;
+  top: 179px;
+  left: 69px;
+  font-family: Montserrat;
+  font-weight: normal;
+  font-size: 14px;
+  opacity: 1;
+  text-align: left;
+}
+
+.posicion-sidebar2{
+  width: 190px;
+  height: 432px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 254px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.posicion-usuarios svg{
+  width: 90px;
+  position: absolute;
+  top: 2px;
+  left: 30px;
+}
+
+
+.posicion-reservas button{
+  width: 90px;
+  background: rgba(242,234,225,1);
+  border-style: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  overflow: hidden;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 198px;
+  left: 100px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 1;
+  text-align: left;
+}
+
+.posicion-reservas svg{
+  width: 90px;
+  position: absolute;
+  top: 197px;
+  left: 30px;
+}
+.posicion-programas button{
+  width: 90px;
+  background: rgba(242,234,225,1);
+  border-style: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 158px;
+  left: 100px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 1;
+  text-align: left;
+}
+
+.posicion-programas svg{
+  width: 90px;
+  position: absolute;
+  top: 157px;
+  left: 30px;
+}
+
+.posicion-asignatura button{
+  width: 90px;
+  background: rgba(242,234,225,1);
+  border-style: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 78px;
+  left: 100px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 1;
+  text-align: left;
+}
+
+.posicion-asignatura svg{
+  width: 90px;
+  position: absolute;
+  top: 77px;
+  left: 30px;
+}
+
+
+.posicion-salas button{
+  width: 90px;
+  background: rgba(242,234,225,1);
+  border-style: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 118px;
+  left: 100px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 1;
+  text-align: left;
+}
+
+.posicion-salas svg{
+  width: 90px;
+  position: absolute;
+  top: 118px;
+  left: 30px;
+}
+
+.posicion-usuarios button {
+  width: 90px;
+  background: rgba(242,234,225,1);
+  border-style: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 1;
+  text-align: left;
+}
+
+.posicion-usuarios svg{
+  width: 90px;
+  position: absolute;
+  top: 39px;
+  left: 30px;
+}
+
+.posicion-inicio button{
+  width: 90px;
+  position: absolute;
+  top: 3px;
+  left: 100px;
+  background: rgb(242,234,225,1);
+  border-style: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: rgba(0,0,0,1);
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 1;
+  text-align: left;
+}
+
+.posicion-inicio svg{
+  width: 90px;
+  position: absolute;
+  top: 2px;
+  left: 30px;
+}
+
+
+.anadir-button{
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  line-height: 0px;
+  background: rgba(254, 175, 0, 1);
+  position: absolute;
+  top: 80px;
+  left:1000px;
+  border-style: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  font-family: Montserrat;
+  color: rgba(255, 255, 255, 1);
+  opacity: 1;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+
+.v1_85 {
+  width: 128px;
+  height: 128px;
+  background: rgba(196,196,196,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 35px;
+  border-radius: 50%;
+}
