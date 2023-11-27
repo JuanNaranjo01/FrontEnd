@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
+import Swal from "sweetalert2";
 import {Asignatura} from "../model/asignatura";
 import {AsignaturaService} from "../service/asignatura.service";
-import Swal from "sweetalert2";
-import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-listar-asignaturas',
@@ -11,74 +10,81 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class ListarAsignaturasComponent implements OnInit {
   public asignaturas: Array<Asignatura> = [];
-  public nombreAsignatura!: string;
+  public nombreAsignaturas!: string;
   public asignaturaSelected!: Asignatura;
   public selected: boolean = false;
 
-  constructor(private asignaturaService: AsignaturaService, private routerPath: Router, private router: ActivatedRoute) {
-    this.asignaturaService.getAsignaturas().subscribe(
-      (asignaturas: Array<Asignatura>) => {
+  constructor(private asignaturaService: AsignaturaService) {
+    this.asignaturaService.getAsignaturas().subscribe((asignaturas: Array<Asignatura>) => {
         this.asignaturas = asignaturas;
       }
     );
   }
 
-  /**
-   * Metodo que se ejecuta al iniciar el componente
-   */
-
-
   ngOnInit(): void {
   }
 
-  /**
-   * Evento que se dispara al seleccionar un curso en la lista
-   * @param asignatura Curso seleccionado
-   */
+  onSelected(asignaturas: Asignatura) {
+    this.asignaturaSelected = asignaturas;
+    this.selected = true
 
-  onSelected(asignatura: Asignatura) {
-    this.asignaturaSelected = asignatura;
-    this.selected=true;
-    // console.log(this.cursoSelected); //Imprime en la consola del navegador el curso seleccionado
-    this.routerPath.navigate(['/editar/' + this.asignaturaSelected.codAsignatura]); //Redirecciona a la ruta /editar/:id
+    Swal.fire('Detalles de la asignatura', '<table class="table">\n' +
+      '  <thead>\n' +
+      '  <tr>\n' +
+      '    <th scope="col">Nombre</th>\n' +
+      '    <th scope="col">ID de la asignatura</th>\n' +
+      '  </tr>\n' +
+      '  </thead>\n' +
+      '  <tbody>\n' +
+      '    <tr>\n' +
+      '      <td>' + this.asignaturaSelected.nombreAsignatura + '</td>\n' +
+      '      <td>' + this.asignaturaSelected.codAsignatura + '</td>\n' +
+      '    </tr>\n' +
+      '  </tbody>\n' +
+      '</table>', 'success');
   }
-
-  editarAsignatura(asignatura: Asignatura) {
-    this.asignaturaSelected = asignatura;
-    this.selected = true;
-    this.routerPath.navigate(['/editar/' + this.asignaturaSelected.codAsignatura]);
-
-  }
-
-  /**
-   * Metodo que elimina un curso seleccionado de la lista
-   * @param asignatura Curso a eliminar
-   */
-
-  borrarAsignatura(asignatura: Asignatura) {
+  borrarAsignatura(asignaturas: Asignatura) {
     Swal.fire({
-      title: "Está seguro?",
-      text: "Usted no puede revertir esto!",
+      title: "¿Estás seguro?",
+      text: "¡Usted no puede revertir eso!",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Si, borra la asignatura!"
+      confirmButtonText: "Sí, borrar la asignatura!"
     }).then((result) => {
       if (result.isConfirmed) {
-        this.asignaturaService.borrarAsignatura(asignatura.codAsignatura).subscribe(() => { // Llama al servicio para eliminar el curso
+        this.asignaturaService.borrarAsignatura(asignaturas.codAsignatura).subscribe(() => {
           Swal.fire({
             title: "Eliminado!",
             text: "La asignatura ha sido eliminada.",
             icon: "success"
           });
-          this.asignaturas = this.asignaturas.filter((c) => c !== asignatura); // Actualiza la lista de cursos en la vista
+          this.asignaturas = this.asignaturas.filter((c) => c !== asignaturas); // Actualiza la lista de progrmas en la vista
         });
       }
     });
   }
-  crearAsignatura() {
-    this.routerPath.navigate(['/crear']);
-  }
-}
 
+  editarAsignatura(asignaturas: Asignatura) {
+    Swal.fire({
+      title: 'Editar asignatura',
+      html:
+        '<p>ID de la asignatura: <strong>' + asignaturas.codAsignatura + '</strong></p>' +
+        '<input id="nombre" class="swal2-input" placeholder="Nombre" value="' + asignaturas.nombreAsignatura + '">',
+      focusConfirm: false,
+      preConfirm: () => {
+        const nombre = (document.getElementById('nombre') as HTMLInputElement).value;
+
+        const asignaturaActualizado: Asignatura = { codAsignatura: asignaturas.codAsignatura,  nombreAsignatura: nombre };
+
+        this.asignaturaService.editarAsignatura(asignaturas.codAsignatura, asignaturaActualizado).subscribe(() => {
+          Swal.fire('Editado!', 'La asignatura ha sido editada correctamente.', 'success');
+          // Actualiza la lista de programas en la vista o realiza alguna acción adicional
+        });
+      }
+    });
+  }
+
+  protected readonly Asignaturas = Asignatura;
+}

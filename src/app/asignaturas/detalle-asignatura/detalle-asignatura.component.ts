@@ -7,5 +7,5 @@ import {Asignatura} from "../model/asignatura";
   styleUrls: ['./detalle-asignatura.component.css']
 })
 export class DetalleAsignaturaComponent {
-  @Input() asignatura!: Asignatura;
+  @Input() asignaturas!: Asignatura;
 }

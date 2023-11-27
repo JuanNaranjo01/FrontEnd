@@ -1,27 +1,17 @@
 <form [formGroup]="crearAsignaturaForm" (ngSubmit)="crearAsignatura(crearAsignaturaForm.value)">
-  <div class="rowfirst">
-    <div class="col">
-
-    <label for="nombre">Nombre de la asignatura</label>
-    <input id = "nombre"
-           type="text"
-           name="nombre"
-           placeholder="Escriba el nombre de la asignatura aquí"
-           formControlName="nombreAsignatura"
-           class="form-control"
-    >
+  <div class="content-form">
+    <div class="row rowfirst">
+      <label for="nombre">Nombre de la asignatura</label>
+      <input id = "nombre"
+             type="text"
+             name="nombre"
+             formControlName="nombreAsignatura"
+             placeholder="Escriba el nombre de la asignatura aquí">
     </div>
 
-
+    <div class="col col-4">
+      <button type="submit" class="btn btn-primaryCA">Crear asignatura</button>
+      <button type="button" class="btn btn-dangerCA" (click)="cancelarCrearAsignatura()">Cancelar</button>
+    </div>
   </div>
-      <br>
-
-      <div class="rowsec justify-content-center mt-3">
-        <div class="col-6">
-          <button type="submit" class="btn btn-primaryCA btn-block">Crear asignatura</button>
-        </div>
-        <div class="col-6">
-          <button type="button" class="btn btn-dangerCA btn-block" (click)="cancelarCrearAsignatura()">Cancelar</button>
-        </div>
-      </div>
 </form>

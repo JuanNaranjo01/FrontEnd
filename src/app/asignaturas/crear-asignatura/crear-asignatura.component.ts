@@ -6,53 +6,43 @@ import {AsignaturaService} from "../service/asignatura.service";
 import {Asignatura} from "../model/asignatura";
 
 
-
 @Component({
   selector: 'app-crear-asignatura',
   templateUrl: './crear-asignatura.component.html',
   styleUrls: ['./crear-asignatura.component.css']
 })
-export class CrearAsignaturaComponent implements OnInit {
-  public crearAsignaturaForm: FormGroup= new FormGroup({codAsignatura: new FormControl(""),nombreAsignatura: new FormControl("")});
-
-  public formAsignatura!: FormGroup;
-
-public formBuilder!: FormBuilder;
+export class CrearAsignaturaComponent implements OnInit{
+  public crearAsignaturaForm:  FormGroup = new FormGroup({codAsignatura:new FormControl(""), nombreAsignatura: new FormControl("")});
+  public formAsignaturas!: FormGroup;
+  public formBuilder!: FormBuilder;
 
 
-  constructor(public router: Router, formBuilder: FormBuilder, private asignaturaService: AsignaturaService) {
-
-    this.formBuilder= formBuilder;
+  constructor(public router: Router, formBuilder:FormBuilder, private asignaturaService: AsignaturaService) {
+    this.formBuilder = formBuilder;
   }
 
-  /**
-   * Metodo que crea una asignatura
-   */
+
   cancelarCrearAsignatura() {
     this.router.navigate(['/listar']);
   }
 
-  /**
-   * Metodo que crea un asignatura en el servicio
-   * @param asignatura Asignatura a crear
-   */
   crearAsignatura(asignatura: Asignatura) {
     this.asignaturaService.crearAsignatura(asignatura).subscribe(
-      (asignatura: Asignatura) => {
-        // console.log(curso);
+      (asignatura: Asignatura)=> {
+        console.log(asignatura);
         Swal.fire(
-          'Asignatura creada',
-          `La asignatura ${asignatura.nombreAsignatura} ha sido creado con exito`,
+          'asignatura creada',
+          `La asignatura ${asignatura.nombreAsignatura} ha sido creado con éxito`,
           'success'
         );
-        this.crearAsignaturaForm.reset();  //Resetea el formulario
+        this.crearAsignaturaForm.reset();
         this.router.navigate(['/listar']);
       });
   }
-//regexp: regular expression
-  ngOnInit(): void {
-    this.crearAsignaturaForm = this.formBuilder.group({
-      nombreAsignatura: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+$/)]]
+
+  ngOnInit() {
+    this.formAsignaturas = this.formBuilder.group({
+      nombreAsignatura: ['', Validators.required, Validators.minLength(4)]
     });
   }
 }

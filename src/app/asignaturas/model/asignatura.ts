@@ -1,8 +1,7 @@
 /**
- *Modelo de datos para las asignaturas
+ *Modelo de datos para los programas
  */
-export class Asignatura{
+export class Asignatura {
   public codAsignatura!: number;
   public nombreAsignatura!: string;
-
 }

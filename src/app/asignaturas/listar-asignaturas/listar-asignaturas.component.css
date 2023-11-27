@@ -13,27 +13,28 @@
   overflow-y: auto;
 }
 
-
-.btn-block{
-  width: 200px;
-  height: 40px;
-  padding: 10px;
-  text-align: center;
-  line-height: 0px;
-  border-style: none;
-  background: rgba(254, 175, 0, 1);
-  position: absolute;
-  top: 80px;
-  left:1000px;
-  border-style: none;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  font-family: Montserrat;
-  color: rgba(255, 255, 255, 1);
-  opacity: 1;
-  font-size: 14px;
-  overflow: hidden;
+td {
+  cursor: pointer;
 }
 
+
+
+/*
+.btn-primary{
+  font-family: Montserrat;
+  font-size: 14px;
+  opacity: 1;
+  position: absolute;
+  border-radius: 5px;
+  background: #feaf00;
+  border: 2px;
+}
+
+.btn-danger{
+
+}
+
+.btn-sm{
+
+}
+ */

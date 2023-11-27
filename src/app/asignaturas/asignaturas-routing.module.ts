@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {ListarAsignaturasComponent} from "./listar-asignaturas/listar-asignaturas.component";
 import {CrearAsignaturaComponent} from "./crear-asignatura/crear-asignatura.component";
 import {DetalleAsignaturaComponent} from "./detalle-asignatura/detalle-asignatura.component";
-import {EditarAsignaturaComponent} from "./editar-asignatura/editar-asignatura.component";
+
 
 const routes: Routes = [
   {
@@ -22,10 +22,6 @@ const routes: Routes = [
     path: 'detalle/:id',
     component: DetalleAsignaturaComponent
   },
-  {
-    path: 'editar/:id',
-    component: EditarAsignaturaComponent
-  }
 ];
 
 @NgModule({
