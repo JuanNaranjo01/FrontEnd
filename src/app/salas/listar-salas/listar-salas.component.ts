@@ -37,7 +37,7 @@ export class ListarSalasComponent implements OnInit {
       '  </thead>\n' +
       '  <tbody>\n' +
       '    <tr>\n' +
-      '      <td>' + this.salaSelected.nombre + '</td>\n' +
+      '      <td>' + this.salaSelected.sala + '</td>\n' +
       '      <td>' + this.salaSelected.id + '</td>\n' +
       '    </tr>\n' +
       '  </tbody>\n' +

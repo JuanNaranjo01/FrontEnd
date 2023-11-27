@@ -44,7 +44,7 @@ export class CrearSalaComponent implements OnInit{
         console.log(sala);
         Swal.fire(
           'Sala creada',
-          `La Sala ${sala.nombre} ha sido creada con éxito`,
+          `La Sala ${sala.sala} ha sido creada con éxito`,
           'success'
         );
         this.crearSalaForm.reset();

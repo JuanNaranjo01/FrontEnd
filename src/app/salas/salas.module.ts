@@ -5,6 +5,7 @@ import {ListarSalasComponent} from "./listar-salas/listar-salas.component";
 import {CrearSalaComponent} from "./crear-sala/crear-sala.component";
 import {DetalleSalaComponent} from "./detalle-sala/detalle-sala.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { EditarSalaComponent } from './editar-sala/editar-sala.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     ListarSalasComponent,
     CrearSalaComponent,
     DetalleSalaComponent,
+    EditarSalaComponent,
   ],
   exports: [
     ListarSalasComponent
