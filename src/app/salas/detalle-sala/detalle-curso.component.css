@@ -1,0 +1,14 @@
+.table {
+  width: 802px;
+  height: 15px;
+  font-family: Montserrat;
+  font-size: 14px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 120px;
+  left: 300px;
+  overflow: visible;
+}
