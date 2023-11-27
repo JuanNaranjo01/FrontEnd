@@ -1,4 +1,4 @@
-.table {
+/*.table {
   width: 802px;
   height: 15px;
   background-repeat: no-repeat;
@@ -33,7 +33,27 @@
   opacity: 1;
   font-size: 14px;
   overflow: hidden;
+}*/
+.table {
+  width: 802px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  font-family: Montserrat;
+  font-size: 14px;
+  opacity: 1;
+  position: absolute;
+  top: 215px;
+  left: 300px;
+  overflow-y: auto;
 }
+
+td {
+  cursor: pointer;
+}
+
+
 
 
 

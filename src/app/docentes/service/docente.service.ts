@@ -30,7 +30,7 @@ export class DocenteService {
     return this.httpClient.delete(this.baseUrl + "/docente/" + idDocente);
   }
 
-  editarDocente(docente: Docente): Observable<Docente>{
-  return this.httpClient.put<Docente>(this.baseUrl+"/docente"+ docente.docenteId, docente);
+  editarDocente(docenteId: number, docente: Docente): Observable<Docente>{
+    return this.httpClient.put<Docente>(this.baseUrl+"/docente"+ docente.docenteId, docente);
   }
 }
